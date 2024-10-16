@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+  .venn-diagram {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .circle {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0.8;
+    transition: transform 0.3s, opacity 0.3s, z-index 0.3s; /* Add z-index transition */
+    text-align: center;
+    z-index: 1; /* Default z-index */
+  }
+  
+  .circle:hover {
+    transform: scale(1.2); /* Slightly enlarge the circle */
+    opacity: 1;
+    z-index: 10; /* Bring the hovered circle above others */
+  }
+  
+  
+  .circle1 {
+    background-color: #1e88e5;
+    top: 0;
+    left: 0;
+  }
+  
+  .circle2 {
+    background-color: #60d400;
+    top: 0;
+    right: 0;
+  }
+  
+  .circle3 {
+    background-color: #ff472f;
+    bottom: 0;
+    left: 20%;
+    right: 50%;
+  }
+  
+  
+  #info-box {
+    position: absolute;
+    bottom: 30px;
+    font-size: 20px;
+    color: #333;
+    visibility: hidden;
+  }
+  
